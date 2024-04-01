@@ -25,9 +25,7 @@ class FiltersNotifier extends StateNotifier<Map<Filter, bool>> {
   void setFilter(Filter filter, bool isActive) {
     // state[filter] = isActive; // not allowed! => mutating state
     state = {
-      // copies the existing Map
       ...state,
-      // overwrites the given filter's value
       filter: isActive,
     };
   }
